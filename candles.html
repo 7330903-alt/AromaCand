@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог Свечей — Аромат Уюта</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили только для этой страницы, чтобы не менять основной файл */
+        .catalog-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Сетка товаров */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Карточка товара */
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            background-color: var(--olive-light);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .product-info h3 {
+            margin: 20px 0 10px;
+            color: var(--text-dark);
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: var(--olive-dark);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            background-color: var(--olive-primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: var(--olive-dark);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--olive-dark);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="catalog-container">
+        <a href="index.html" class="back-link">← Назад на главную</a>
+        
+        <header class="catalog-header">
+            <h1>Наши свечи</h1>
+            <p>Натуральный соевый воск и уютные ароматы</p>
+        </header>
+
+        <main class="product-grid">
+            <div class="product-card">
+                <div class="product-image">🕯️</div>
+                <div class="product-info">
+                    <h3>Лаванда и ваниль</h3>
+                    <span class="price">850 ₽</span>
+                    <button class="btn-buy">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🌲</div>
+                <div class="product-info">
+                    <h3>Зимний лес</h3>
+                    <span class="price">900 ₽</span>
+                    <button class="btn-buy">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🍊</div>
+                <div class="product-info">
+                    <h3>Пряный цитрус</h3>
+                    <span class="price">850 ₽</span>
+                    <button class="btn-buy">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🥥</div>
+                <div class="product-info">
+                    <h3>Кокосовый рай</h3>
+                    <span class="price">950 ₽</span>
+                    <button class="btn-buy">В корзину</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
