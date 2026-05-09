@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аромат Уюта — Главная</title>
+    <title>Аромат Уюта — Мастерская</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка / Баннер -->
+    <!-- Первый экран (Hero) -->
     <section class="hero">
         <div class="hero-content">
             <h1>Аромат Уюта</h1>
-            <p>Ручная работа. Натуральный воск.</p>
+            <p>Ручная работа. Натуральный воск. Ваша атмосфера.</p>
             <a href="#categories" class="btn-main">Смотреть каталог</a>
         </div>
     </section>
 
-    <!-- Сетка категорий -->
+    <!-- Секция с описанием -->
+    <section class="about-text">
+        <h2>Магия в каждой детали</h2>
+        <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом. Используем только натуральный воск и премиальные аромамасла.</p>
+    </section>
+
+    <!-- Блоки-категории -->
     <section id="categories" class="category-grid">
         
-        <!-- Блок: Свечи -->
+        <!-- Раздел: Свечи -->
         <div class="category-item olive-bg" id="candles-block">
             <div class="category-info" onclick="toggleCategory('candles-block')">
                 <h3>Свечи</h3>
                 <p>Ароматические и интерьерные</p>
             </div>
             <div class="preview-box">
-                <p>Здесь будут наши лучшие ароматы...</p>
+                <div class="mini-products">
+                    <div class="item">🕯️ Лаванда</div>
+                    <div class="item">🕯️ Хвоя</div>
+                </div>
+                <a href="candles.html" class="btn-more">Весь каталог свечей</a>
             </div>
         </div>
 
-        <!-- Блок: Творчество -->
+        <!-- Раздел: Для творчества -->
         <div class="category-item sage-bg" id="materials-block">
             <div class="category-info" onclick="toggleCategory('materials-block')">
-                <h3>Творчество</h3>
+                <h3>Для творчества</h3>
                 <p>Воск, фитили и формы</p>
             </div>
             <div class="preview-box">
-                <p>Все для создания шедевров...</p>
+                <div class="mini-products">
+                    <div class="item">🍯 Воск</div>
+                    <div class="item">🧵 Фитили</div>
+                </div>
+                <a href="materials.html" class="btn-more">Все материалы</a>
             </div>
         </div>
 
-        <!-- Блок: Декор -->
+        <!-- Раздел: Декор -->
         <div class="category-item dark-olive-bg" id="decor-block">
             <div class="category-info" onclick="toggleCategory('decor-block')">
                 <h3>Декор</h3>
-                <p>Аксессуары для дома</p>
+                <p>Подсвечники и аксессуары</p>
             </div>
             <div class="preview-box">
-                <p>Уют в мелочах...</p>
+                <div class="mini-products">
+                    <div class="item">🏺 Гипс</div>
+                    <div class="item">🪵 Подставки</div>
+                </div>
+                <a href="decor.html" class="btn-more">Весь декор</a>
             </div>
         </div>
 
