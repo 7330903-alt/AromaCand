@@ -1,33 +1,20 @@
-/* ==========================================
-   1. ПЕРЕМЕННЫЕ И БАЗОВЫЕ НАСТРОЙКИ
-   ========================================== */
 :root {
-    --olive-primary: #808b61;    /* Основной оливковый */
-    --olive-light: #b5ba9b;      /* Светлый шалфей */
-    --olive-dark: #4f5d3d;       /* Глубокий лесной */
-    --cream-bg: #fcf9f2;         /* Теплый кремовый фон */
-    --text-dark: #3a4131;        /* Цвет текста */
+    --olive-primary: #808b61;
+    --olive-light: #b5ba9b;
+    --olive-dark: #4f5d3d;
+    --cream-bg: #fcf9f2;
+    --text-dark: #3a4131;
     --white: #ffffff;
-}
-
-* {
-    box-sizing: border-box; /* Чтобы отступы не увеличивали размер элементов */
 }
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     background-color: var(--cream-bg);
     color: var(--text-dark);
-    line-height: 1.6;
 }
 
-/* ==========================================
-   2. ГЛАВНАЯ СТРАНИЦА (ЛЕНДИНГ)
-   ========================================== */
-
-/* Первый экран */
+/* Лендинг */
 .hero {
     height: 60vh;
     display: flex;
@@ -36,195 +23,57 @@ body {
     text-align: center;
     background-color: var(--olive-light);
     color: var(--white);
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 .btn-main {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 30px;
+    padding: 12px 25px;
     background-color: var(--olive-dark);
     color: var(--white);
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s;
+    border-radius: 20px;
 }
 
-/* Секция описания */
 .about-text {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
 }
 
-/* ==========================================
-   3. ИНТЕРАКТИВНЫЕ БЛОКИ КАТЕГОРИЙ
-   ========================================== */
-.category-grid {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Категории на главной */
 .category-item {
     cursor: pointer;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--white);
-    transition: all 0.4s ease;
-    min-height: 150px;
+    color: white;
 }
 
-.category-info {
-    padding: 40px 0;
-    text-align: center;
-    width: 100%;
-}
+.olive-bg { background: var(--olive-primary); }
+.sage-bg { background: var(--olive-light); }
+.dark-olive-bg { background: var(--olive-dark); }
 
-.category-info h3 {
-    font-size: 2rem;
-    margin: 0;
-    letter-spacing: 1px;
-}
-
-/* Выезжающая панель */
 .preview-box {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease;
     width: 100%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.05);
 }
 
-/* Состояние при клике (активируется через JS) */
 .category-item.active .preview-box {
-    max-height: 300px; /* Раскрываем блок */
+    max-height: 200px;
 }
 
-.mini-products {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px 0;
-}
+.mini-products { padding: 15px; display: flex; justify-content: center; gap: 10px; }
+.mini-products .item { background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 10px; }
 
-.mini-products .item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 15px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-}
-
-.btn-more {
-    display: block;
-    padding-bottom: 25px;
-    color: var(--white);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Цвета для плиток */
-.olive-bg { background-color: var(--olive-primary); }
-.sage-bg { background-color: var(--olive-light); }
-.dark-olive-bg { background-color: var(--olive-dark); }
-
-/* ==========================================
-   4. СТРАНИЦА КАТАЛОГА (ВИТРИНА)
-   ========================================== */
-.catalog-header {
-    background-color: var(--olive-dark);
-    color: var(--white);
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-}
-
-.btn-back {
-    position: absolute;
-    left: 20px;
-    top: 45px;
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.catalog-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.product-grid {
-    display: grid;
-    /* Адаптивная сетка: карточки не меньше 280px */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #f0f0f0;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-}
-
-.product-image {
-    height: 220px;
-    background-color: var(--cream-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4.5rem;
-}
-
-.product-info {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.product-info h3 {
-    margin: 0 0 10px 0;
-    color: var(--olive-dark);
-}
-
-.product-info p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-.price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.btn-buy {
-    background-color: var(--olive-primary);
-    color: var(--white);
-    border: none;
-    padding: 14px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
+/* Каталог */
+.catalog-header { background: var(--olive-dark); color: white; padding: 30px; text-align: center; }
+.btn-back { color: white; text-decoration: none; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
+.product-card { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.product-image { font-size: 3rem; margin-bottom: 15px; }
+.btn-buy { background: var(--olive-primary); color: white; border: none; padding: 10px 20px; border-radius: 8px; width: 100%; }
