@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аромат Уюта — Мастерская</title>
-    <!-- Подключаем наш общий файл стилей -->
+    <!-- Связь с CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Первый экран (Hero) -->
+    <!-- Первый экран -->
     <section class="hero">
         <div class="hero-content">
             <h1>Аромат Уюта</h1>
@@ -18,16 +18,15 @@
         </div>
     </section>
 
-    <!-- 2. Секция с описанием бренда -->
+    <!-- Описание -->
     <section class="about-text">
         <h2>Магия в каждой детали</h2>
         <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом. Используем только натуральный воск и премиальные аромамасла.</p>
     </section>
 
-    <!-- 3. Блоки-категории с интерактивной логикой -->
+    <!-- Категории -->
     <section id="categories" class="category-grid">
         
-        <!-- Раздел: Свечи -->
         <div class="category-item olive-bg" id="candles-block">
             <div class="category-info" onclick="toggleCategory('candles-block')">
                 <h3>Свечи</h3>
@@ -42,7 +41,6 @@
             </div>
         </div>
 
-        <!-- Раздел: Для творчества -->
         <div class="category-item sage-bg" id="materials-block">
             <div class="category-info" onclick="toggleCategory('materials-block')">
                 <h3>Для творчества</h3>
@@ -53,11 +51,10 @@
                     <div class="item">🍯 Воск</div>
                     <div class="item">🧵 Фитили</div>
                 </div>
-                <a href="materials.html" class="btn-more">Все материалы</a>
+                <a href="#" class="btn-more">Все материалы</a>
             </div>
         </div>
 
-        <!-- Раздел: Декор -->
         <div class="category-item dark-olive-bg" id="decor-block">
             <div class="category-info" onclick="toggleCategory('decor-block')">
                 <h3>Декор</h3>
@@ -68,13 +65,11 @@
                     <div class="item">🏺 Гипс</div>
                     <div class="item">🪵 Подставки</div>
                 </div>
-                <a href="decor.html" class="btn-more">Весь декор</a>
+                <a href="#" class="btn-more">Весь декор</a>
             </div>
         </div>
-
     </section>
 
-    <!-- Подключаем логику управления блоками -->
     <script src="script.js"></script>
 </body>
 </html>
