@@ -3,58 +3,46 @@
     --olive-light: #b5ba9b;
     --olive-dark: #4f5d3d;
     --cream-bg: #fcf9f2;
-    --text-dark: #3a4131;
     --white: #ffffff;
 }
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--cream-bg);
-    color: var(--text-dark);
 }
 
-/* Лендинг */
 .hero {
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     background-color: var(--olive-light);
-    color: var(--white);
-}
-
-.btn-main {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: var(--olive-dark);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.about-text {
-    padding: 40px 20px;
+    color: white;
     text-align: center;
 }
 
-/* Категории на главной */
+/* Настройки сетки категорий */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на мобильных */
+    width: 100%;
+}
+
 .category-item {
-    cursor: pointer;
-    min-height: 150px;
+    flex: 1; /* ГАРАНТИРУЕТ ОДИНАКОВУЮ ШИРИНУ ВСЕХ БЛОКОВ */
+    min-width: 320px; /* Чтобы на телефонах блоки вставали друг под друга */
+    min-height: 200px;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Центрируем контент */
     align-items: center;
-    justify-content: center;
+    cursor: pointer;
     color: white;
+    transition: background 0.3s;
 }
 
-.olive-bg { background: var(--olive-primary); }
-.sage-bg { background: var(--olive-light); }
-.dark-olive-bg { background: var(--olive-dark); }
-
+/* Контейнер с кнопками внутри блока */
 .preview-box {
     max-height: 0;
     overflow: hidden;
@@ -64,16 +52,39 @@ body {
 }
 
 .category-item.active .preview-box {
-    max-height: 200px;
+    max-height: 250px; /* Раскрываем при клике */
 }
 
-.mini-products { padding: 15px; display: flex; justify-content: center; gap: 10px; }
-.mini-products .item { background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 10px; }
+/* Выравнивание мини-кнопок */
+.mini-products {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+}
 
-/* Каталог */
-.catalog-header { background: var(--olive-dark); color: white; padding: 30px; text-align: center; }
-.btn-back { color: white; text-decoration: none; }
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
-.product-card { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.product-image { font-size: 3rem; margin-bottom: 15px; }
-.btn-buy { background: var(--olive-primary); color: white; border: none; padding: 10px 20px; border-radius: 8px; width: 100%; }
+.item-link {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.item-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn-more {
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Цвета фонов */
+.olive-bg { background-color: var(--olive-primary); }
+.sage-bg { background-color: var(--olive-light); }
+.dark-olive-bg { background-color: var(--olive-dark); }
