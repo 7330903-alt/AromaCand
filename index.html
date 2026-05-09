@@ -3,41 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аромат Уюта — Магазин свечей</title>
+    <title>Аромат Уюта — Мастерская свечей</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header>
-        <div class="logo">Аромат Уюта</div>
-        <nav>
-            <a href="#catalog">Каталог</a>
-            <a href="#about">О нас</a>
-            <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
-        </nav>
-    </header>
 
-    <!-- Главный баннер -->
+    <!-- Первый экран -->
     <section class="hero">
-        <h1>Свечи, которые согревают душу</h1>
-        <p>Натуральный воск и неповторимые ароматы для вашего дома</p>
-        <button onclick="scrollToCatalog()">Выбрать свечу</button>
+        <div class="hero-content">
+            <h1>Аромат Уюта</h1>
+            <p>Ручная работа. Натуральный воск. Ваша атмосфера.</p>
+            <a href="#categories" class="btn-main">Смотреть каталог</a>
+        </div>
     </section>
 
-    <!-- Каталог товаров -->
-    <main id="catalog">
-        <h2>Наши изделия</h2>
-        <div class="product-grid" id="product-list">
-            <!-- Сюда JavaScript будет подгружать товары из базы -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x300" alt="Свеча">
-                <h3>Лавандовый вечер</h3>
-                <p>Успокаивающий аромат прованских трав</p>
-                <span class="price">850 ₽</span>
-                <button class="add-to-cart">В корзину</button>
+    <!-- Секция с описанием -->
+    <section class="about-text">
+        <h2>Магия в каждой детали</h2>
+        <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом. Используем только соевый воск и премиальные аромамасла.</p>
+    </section>
+
+    <!-- Блоки-ссылки (Категории) -->
+    <section id="categories" class="category-grid">
+        <a href="candles.html" class="category-item olive-bg">
+            <div class="category-info">
+                <h3>Свечи</h3>
+                <p>Ароматические и интерьерные</p>
             </div>
-        </div>
-    </main>
+        </a>
+
+        <a href="materials.html" class="category-item sage-bg">
+            <div class="category-info">
+                <h3>Для творчества</h3>
+                <p>Воск, фитили и формы</p>
+            </div>
+        </a>
+
+        <a href="decor.html" class="category-item dark-olive-bg">
+            <div class="category-info">
+                <h3>Декор</h3>
+                <p>Подсвечники и аксессуары</p>
+            </div>
+        </a>
+    </section>
 
     <script src="script.js"></script>
 </body>
