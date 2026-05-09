@@ -1,82 +1,111 @@
-/* Переменные для легкой смены цветов */
 :root {
-    --olive-primary: #808b61;    /* Более мягкий оливковый */
-    --olive-light: #b5ba9b;      /* Приглушенный шалфейный */
-    --olive-dark: #4f5d3d;       /* Глубокий оливковый для акцентов */
-    --cream-bg: #fcf9f2;         /* Почти белый, теплый фон */
-    --text-dark: #3a4131;        /* Темный оливково-серый для текста */}
+    --olive-primary: #808b61;
+    --olive-light: #b5ba9b;
+    --olive-dark: #4f5d3d;
+    --cream-bg: #fcf9f2;
+    --text-dark: #3a4131;
+}
 
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--cream-bg);
     color: var(--text-dark);
-    line-height: 1.6;
 }
 
-/* Первый экран */
 .hero {
-    height: 80vh; /* Занимает 80% высоты экрана */
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: var(--olive-light);
     color: white;
-    padding: 0 20px;
 }
 
 .btn-main {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 12px 25px;
     background-color: var(--olive-dark);
     color: white;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+    border-radius: 25px;
 }
 
-/* Секция описания */
 .about-text {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-/* Блоки-плитки */
+/* Сетка категорий */
 .category-grid {
     display: flex;
-    flex-direction: column; /* Блоки друг под другом */
+    flex-direction: column;
 }
 
 .category-item {
-    height: 250px; /* Большая высота блока */
+    cursor: pointer;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: white;
-    transition: filter 0.3s;
-    margin: 5px 0; /* Небольшой отступ между плитками */
-}
-
-.category-item:hover {
-    filter: brightness(90%);
+    transition: all 0.4s ease;
+    min-height: 150px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .category-info {
+    padding: 40px 0;
     text-align: center;
+    width: 100%;
 }
 
 .category-info h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0;
-    text-transform: uppercase;
 }
 
-/* Цвета для разных плиток */
+/* Выезжающий блок */
+.preview-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.category-item.active .preview-box {
+    max-height: 250px;
+}
+
+.mini-products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.mini-products .item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.btn-more {
+    display: block;
+    padding-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Цвета фонов */
 .olive-bg { background-color: var(--olive-primary); }
 .sage-bg { background-color: var(--olive-light); }
 .dark-olive-bg { background-color: var(--olive-dark); }
