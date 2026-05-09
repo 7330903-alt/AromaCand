@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аромат Уюта — Мастерская</title>
-    <!-- Связь с CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Первый экран -->
+    <!-- Главный баннер -->
     <section class="hero">
         <div class="hero-content">
             <h1>Аромат Уюта</h1>
@@ -21,12 +20,13 @@
     <!-- Описание -->
     <section class="about-text">
         <h2>Магия в каждой детали</h2>
-        <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом. Используем только натуральный воск и премиальные аромамасла.</p>
+        <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом.</p>
     </section>
 
-    <!-- Категории -->
+    <!-- Сетка категорий -->
     <section id="categories" class="category-grid">
         
+        <!-- Блок: Свечи -->
         <div class="category-item olive-bg" id="candles-block">
             <div class="category-info" onclick="toggleCategory('candles-block')">
                 <h3>Свечи</h3>
@@ -34,40 +34,44 @@
             </div>
             <div class="preview-box">
                 <div class="mini-products">
-                    <div class="item">🕯️ Лаванда</div>
-                    <div class="item">🕯️ Хвоя</div>
+                    <!-- Кнопки теперь кликабельны -->
+                    <a href="candles.html" class="item-link">🕯️ Лаванда</a>
+                    <a href="candles.html" class="item-link">🕯️ Хвоя</a>
                 </div>
                 <a href="candles.html" class="btn-more">Весь каталог свечей</a>
             </div>
         </div>
 
+        <!-- Блок: Творчество -->
         <div class="category-item sage-bg" id="materials-block">
             <div class="category-info" onclick="toggleCategory('materials-block')">
-                <h3>Для творчества</h3>
+                <h3>Творчество</h3>
                 <p>Воск, фитили и формы</p>
             </div>
             <div class="preview-box">
                 <div class="mini-products">
-                    <div class="item">🍯 Воск</div>
-                    <div class="item">🧵 Фитили</div>
+                    <a href="#" class="item-link">🍯 Воск</a>
+                    <a href="#" class="item-link">🧵 Фитили</a>
                 </div>
                 <a href="#" class="btn-more">Все материалы</a>
             </div>
         </div>
 
+        <!-- Блок: Декор -->
         <div class="category-item dark-olive-bg" id="decor-block">
             <div class="category-info" onclick="toggleCategory('decor-block')">
                 <h3>Декор</h3>
-                <p>Подсвечники и аксессуары</p>
+                <p>Аксессуары для дома</p>
             </div>
             <div class="preview-box">
                 <div class="mini-products">
-                    <div class="item">🏺 Гипс</div>
-                    <div class="item">🪵 Подставки</div>
+                    <a href="#" class="item-link">🏺 Гипс</a>
+                    <a href="#" class="item-link">🪵 Подставки</a>
                 </div>
                 <a href="#" class="btn-more">Весь декор</a>
             </div>
         </div>
+
     </section>
 
     <script src="script.js"></script>
