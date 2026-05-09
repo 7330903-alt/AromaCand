@@ -3,66 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог свечей — Аромат Уюта</title>
+    <title>Аромат Уюта — Мастерская</title>
+    <!-- Подключаем наш общий файл стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="catalog-header">
-        <a href="index.html" class="btn-back">← На главную</a>
-        <h1>Каталог свечей</h1>
-    </header>
-
-    <main class="catalog-container">
-        <div class="product-grid">
-            
-            <!-- Товар 1 -->
-            <div class="product-card">
-                <div class="product-badge">Хит</div>
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Лавандовый вечер</h3>
-                    <p>Натуральный воск, эфирное масло лаванды. Время горения: 30 часов.</p>
-                    <span class="price">850 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
-
-            <!-- Товар 2 -->
-            <div class="product-card">
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Утро в лесу</h3>
-                    <p>Аромат сосновой хвои и свежей росы. Создает атмосферу прогулки по лесу.</p>
-                    <span class="price">900 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
-
-            <!-- Товар 3 -->
-            <div class="product-card">
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Пряный апельсин</h3>
-                    <p>Сочетание цитруса, корицы и гвоздики. Идеально для уютных вечеров.</p>
-                    <span class="price">850 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
-
-            <!-- Товар 4 -->
-            <div class="product-card">
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Ванильное небо</h3>
-                    <p>Нежный, сладкий аромат ванили и взбитых сливок. Очень мягкое горение.</p>
-                    <span class="price">800 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
-
+    <!-- 1. Первый экран (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Аромат Уюта</h1>
+            <p>Ручная работа. Натуральный воск. Ваша атмосфера.</p>
+            <a href="#categories" class="btn-main">Смотреть каталог</a>
         </div>
-    </main>
+    </section>
 
+    <!-- 2. Секция с описанием бренда -->
+    <section class="about-text">
+        <h2>Магия в каждой детали</h2>
+        <p>Мы создаем не просто свечи, а повод остановиться, выдохнуть и насладиться моментом. Используем только натуральный воск и премиальные аромамасла.</p>
+    </section>
+
+    <!-- 3. Блоки-категории с интерактивной логикой -->
+    <section id="categories" class="category-grid">
+        
+        <!-- Раздел: Свечи -->
+        <div class="category-item olive-bg" id="candles-block">
+            <div class="category-info" onclick="toggleCategory('candles-block')">
+                <h3>Свечи</h3>
+                <p>Ароматические и интерьерные</p>
+            </div>
+            <div class="preview-box">
+                <div class="mini-products">
+                    <div class="item">🕯️ Лаванда</div>
+                    <div class="item">🕯️ Хвоя</div>
+                </div>
+                <a href="candles.html" class="btn-more">Весь каталог свечей</a>
+            </div>
+        </div>
+
+        <!-- Раздел: Для творчества -->
+        <div class="category-item sage-bg" id="materials-block">
+            <div class="category-info" onclick="toggleCategory('materials-block')">
+                <h3>Для творчества</h3>
+                <p>Воск, фитили и формы</p>
+            </div>
+            <div class="preview-box">
+                <div class="mini-products">
+                    <div class="item">🍯 Воск</div>
+                    <div class="item">🧵 Фитили</div>
+                </div>
+                <a href="materials.html" class="btn-more">Все материалы</a>
+            </div>
+        </div>
+
+        <!-- Раздел: Декор -->
+        <div class="category-item dark-olive-bg" id="decor-block">
+            <div class="category-info" onclick="toggleCategory('decor-block')">
+                <h3>Декор</h3>
+                <p>Подсвечники и аксессуары</p>
+            </div>
+            <div class="preview-box">
+                <div class="mini-products">
+                    <div class="item">🏺 Гипс</div>
+                    <div class="item">🪵 Подставки</div>
+                </div>
+                <a href="decor.html" class="btn-more">Весь декор</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Подключаем логику управления блоками -->
+    <script src="script.js"></script>
 </body>
 </html>
