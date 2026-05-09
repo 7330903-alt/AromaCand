@@ -17,6 +17,13 @@ function toggleCategory(blockId) {
         } else {
             // Остальные блоки закрываем, чтобы не загромождать экран
             block.classList.remove('active');
+
+/**
+ * Функция имитации добавления в корзину
+ */
+function addToCart(itemName) {
+    alert("Товар " + itemName + " успешно добавлен в корзину!");
+}
         }
     });
 }
