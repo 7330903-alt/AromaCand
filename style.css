@@ -3,7 +3,6 @@
     --olive-light: #b5ba9b;
     --olive-dark: #4f5d3d;
     --cream-bg: #fcf9f2;
-    --white: #ffffff;
 }
 
 body {
@@ -12,55 +11,57 @@ body {
     background-color: var(--cream-bg);
 }
 
-.hero {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--olive-light);
-    color: white;
-    text-align: center;
-}
-
-/* Настройки сетки категорий */
+/* Настройка сетки */
 .category-grid {
     display: flex;
-    flex-wrap: wrap; /* Позволяет блокам переноситься на мобильных */
+    flex-wrap: wrap;
     width: 100%;
 }
 
+/* ИСПРАВЛЕНИЕ ЦЕНТРИРОВАНИЯ ТЕКСТА */
 .category-item {
-    flex: 1; /* ГАРАНТИРУЕТ ОДИНАКОВУЮ ШИРИНУ ВСЕХ БЛОКОВ */
-    min-width: 320px; /* Чтобы на телефонах блоки вставали друг под друга */
-    min-height: 200px;
+    flex: 1;
+    min-width: 320px;
+    min-height: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Центрируем контент */
-    align-items: center;
+    flex-direction: column; /* Элементы внутри идут сверху вниз */
+    justify-content: center; /* Центрируем всё содержимое по вертикали */
+    align-items: center;    /* Центрируем всё содержимое по горизонтали */
     cursor: pointer;
     color: white;
-    transition: background 0.3s;
+    text-align: center;     /* Центрируем сам текст внутри строк */
+    padding: 20px;          /* Внутренний отступ, чтобы текст не касался краев */
+    transition: 0.3s;
 }
 
-/* Контейнер с кнопками внутри блока */
+/* Сбрасываем лишние отступы у заголовков и текста */
+.category-info h3 {
+    margin: 0 0 5px 0;      /* Убираем верхний отступ, оставляем чуть-чуть снизу */
+    font-size: 1.8rem;
+}
+
+.category-info p {
+    margin: 0;              /* Убираем все отступы, чтобы не перекашивало */
+    font-size: 1rem;
+}
+
+/* Выпадающая панель с кнопками */
 .preview-box {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.4s ease-in-out;
     width: 100%;
-    text-align: center;
 }
 
 .category-item.active .preview-box {
-    max-height: 250px; /* Раскрываем при клике */
+    max-height: 200px;
 }
 
-/* Выравнивание мини-кнопок */
 .mini-products {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
 }
 
 .item-link {
@@ -69,22 +70,11 @@ body {
     border-radius: 20px;
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap; /* Чтобы текст в кнопках не переносился */
 }
 
-.item-link:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.btn-more {
-    display: block;
-    margin-bottom: 20px;
-    color: white;
-    font-weight: bold;
-}
-
-/* Цвета фонов */
+/* Фоны */
 .olive-bg { background-color: var(--olive-primary); }
 .sage-bg { background-color: var(--olive-light); }
 .dark-olive-bg { background-color: var(--olive-dark); }
