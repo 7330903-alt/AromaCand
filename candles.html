@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог свечей — Аромат Уюта</title>
+    <title>Каталог Свечей</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="catalog-header">
-        <a href="index.html" class="btn-back">← На главную</a>
+
+    <header style="padding: 20px; text-align: center; background: #808b61; color: white;">
         <h1>Наши свечи</h1>
+        <a href="index.html" style="color: white; text-decoration: none;">← Назад на главную</a>
     </header>
 
-    <main class="catalog-container">
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Лавандовый вечер</h3>
-                    <p>Натуральный воск. 30 часов горения.</p>
-                    <span class="price">850 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🕯️</div>
-                <div class="product-info">
-                    <h3>Утро в лесу</h3>
-                    <p>Аромат хвои и свежести.</p>
-                    <span class="price">900 ₽</span>
-                    <button class="btn-buy">Выбрать</button>
-                </div>
-            </div>
+    <!-- Контейнер-сетка для карточек товаров -->
+    <section class="product-grid">
+        
+        <!-- Карточка товара 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Свеча Лаванда">
+            <h3>Свеча "Лаванда"</h3>
+            <p>100% соевый воск</p>
+            <span style="font-weight: bold; color: #808b61;">850 руб.</span>
         </div>
-    </main>
+
+        <!-- Карточка товара 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Свеча Хвоя">
+            <h3>Свеча "Зимний лес"</h3>
+            <p>Древесный аромат</p>
+            <span style="font-weight: bold; color: #808b61;">900 руб.</span>
+        </div>
+
+        <!-- Карточка товара 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Свеча Ваниль">
+            <h3>Свеча "Ваниль"</h3>
+            <p>Сладкий уют</p>
+            <span style="font-weight: bold; color: #808b61;">850 руб.</span>
+        </div>
+
+    </section>
+
 </body>
 </html>
