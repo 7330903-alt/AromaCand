@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог свечей — Аромат Уюта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="catalog-header">
+        <a href="index.html" class="btn-back">← Назад</a>
+        <h1>Наши свечи</h1>
+    </header>
+
+    <main class="catalog-container">
+        <div class="product-grid">
+            <!-- Карточка товара 1 -->
+            <div class="product-card">
+                <div class="product-image">🕯️</div>
+                <h3>Лавандовый вечер</h3>
+                <p>Успокаивающий аромат прованских полей</p>
+                <span class="price">850 ₽</span>
+                <button class="btn-buy" onclick="addToCart('Лаванда')">В корзину</button>
+            </div>
+
+            <!-- Карточка товара 2 -->
+            <div class="product-card">
+                <div class="product-image">🕯️</div>
+                <h3>Утро в лесу</h3>
+                <p>Свежесть хвои и кедровых орешков</p>
+                <span class="price">900 ₽</span>
+                <button class="btn-buy" onclick="addToCart('Хвоя')">В корзину</button>
+            </div>
+
+            <!-- Карточка товара 3 -->
+            <div class="product-card">
+                <div class="product-image">🕯️</div>
+                <h3>Пряный апельсин</h3>
+                <p>Теплый цитрусовый аромат с корицей</p>
+                <span class="price">850 ₽</span>
+                <button class="btn-buy" onclick="addToCart('Апельсин')">В корзину</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
