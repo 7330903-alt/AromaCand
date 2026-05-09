@@ -1,4 +1,4 @@
-:root {
+w:root {
     --olive-primary: #808b61;
     --olive-light: #b5ba9b;
     --olive-dark: #4f5d3d;
@@ -109,3 +109,74 @@ body {
 .olive-bg { background-color: var(--olive-primary); }
 .sage-bg { background-color: var(--olive-light); }
 .dark-olive-bg { background-color: var(--olive-dark); }
+
+/* Стили для страницы каталога */
+.catalog-header {
+    padding: 20px;
+    background-color: var(--olive-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-back {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.catalog-container {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.product-image {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    background: var(--cream-bg);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: var(--olive-dark);
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--text-dark);
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--olive-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-buy:hover {
+    background-color: var(--olive-dark);
+}
