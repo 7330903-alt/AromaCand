@@ -1,12 +1,14 @@
-function toggleCategory(blockId) {
-    const targetBlock = document.getElementById(blockId);
-    const allBlocks = document.querySelectorAll('.category-item');
+function toggleCategory(id) {
+    const block = document.getElementById(id);
     
-    allBlocks.forEach(block => {
-        if (block === targetBlock) {
-            block.classList.toggle('active');
-        } else {
-            block.classList.remove('active');
-        }
-    });
+    // Если блок уже открыт — закрываем, иначе открываем
+    if (block.classList.contains('active')) {
+        block.classList.remove('active');
+    } else {
+        // Сначала закроем все остальные блоки (необязательно, но красиво)
+        document.querySelectorAll('.category-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        block.classList.add('active');
+    }
 }
